@@ -1,10 +1,15 @@
 /* Small Devices */
 @media only screen and (max-width: 767px) {
 .navbar .navbar-brand{
-    width: 65%;
+    display: block;
+    max-width: 160px;
+    margin: 0;
 }
 .search-active + .head-searchBox{
     right: 0;
+}
+.nivoSlider img{
+    min-height: 300px;
 }
 .nivo-caption h2, .nivo-caption p {
     display: none;
@@ -19,9 +24,50 @@
     font-size: 30px !important;
     padding: 20px 0px 0;
 }
+.type p {
+	font-size: 30px;
+	line-height: 47px;
+}
+.type p span.typed-text {
+	font-size: 30px;
+	line-height: 47px;
+	min-height: 50px;
+}
+.section-hed h2{
+	font-size: 22px;
+	line-height: 36px;
+	color: #363636;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.section-hed h4 {
+    font-size: 20px;
+    line-height: 32px;
+}
+.ptb {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.pt-90 {
+    padding-top: 30px;
+}
+.pb-60 {
+    padding-bottom: 30px;
+}
+.content {
+    position: relative;
+    overflow: hidden;
+    padding: 30px 20px;
+    min-height: auto;
+}
 }
 /* Small Devices And Tablets */
 @media only screen and (max-width: 768px) {
+.navbar .navbar-brand{
+    display: block;
+    max-width: 160px;
+    margin: 0;
+}
 .slider-caro .nivo-caption{
     top: 65%;
 }
@@ -43,6 +89,13 @@
 }
 /* Medius Devices , Desktop */
 @media only screen and (min-width: 992px) {
+    .content {
+        position: relative;
+        overflow: hidden;
+        padding: 30px 20px;
+        min-height: 413px;
+    }
+    
     
 }
 
