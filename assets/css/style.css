@@ -25,6 +25,10 @@ img {
     padding-top: 90px;
     padding-bottom: 90px;
 }
+.ptb-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 .pb-30 {
     padding-bottom: 30px;
 }
@@ -474,7 +478,7 @@ header {
     right: 0;
     bottom: -17px;
 }
-.box {
+.box{
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -489,7 +493,7 @@ header {
     cursor: -webkit-grab;
     cursor: grab;
 }
-.box:before {
+.box:before, .focusbox:before{
 	position: absolute;
 	top: 0px;
 	left: 100%;
@@ -499,7 +503,7 @@ header {
 	content: "";
 	transition: all 0.3s;
 }
-.box:after {
+.box:after, .focusbox:after{
 	position: absolute;
 	bottom: 0px;
 	left: 100%;
@@ -509,7 +513,7 @@ header {
 	content: "";
 	transition: all 0.3s;
 }
-.box:hover:before, .box:hover:after {
+.box:hover:before, .focusbox:hover:before, .box:hover:after, .focusbox:hover:after{
 	left: 0px;
 }
 .content {
@@ -549,7 +553,6 @@ header {
     -o-border-radius: 999px 999px 999px 999px;
     color: #2196f3;
     display: inline-block;
-    font-size: 30px;
     height: 88px;
     line-height: 90px;
     max-width: 100%;
@@ -590,24 +593,24 @@ header {
     -webkit-transition-timing-function: cubic-bezier(0.5, -0.7, 0.67, 0.7);
     width: 96px;
 }
-.box:hover i{
+.box:hover i, .focusbox:hover i{
     color: #fff!important;
 	background-color: #2196f3;
 }
-.box:hover i:after{
+.box:hover i:after, .focusbox i:after{
     border: 1px solid #2196f3;
 }
-.box:hover .content:after, .box:hover .content:before {
+.box:hover .content:after, .focusbox:hover .content:after, .box:hover .content:before, .focusbox:hover .content:before {
 	top: 0px;
 }
-.box h3{
+.box h3, .focusbox h3{
     font-size: 19px;
     line-height: 34px;
     color: #333;
     font-weight: 600;
     padding: 30px 0 10px;
 }
-.box p{
+.box p, .focusbox p{
     font-size: 14px;
     line-height: 24px;
     color: #333;
@@ -615,3 +618,140 @@ header {
     padding: 0px;
 }
 /*--- Services end ---*/
+/*--- Focus start ---*/
+.focus-bg{
+	background-image: url("../images/world-map-306338-1.png");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	position: relative;
+}
+.focus-bg::before {
+	content: '';
+	background-color: rgba(31, 31, 31, 0.75);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	
+}
+.focus-bg .content {
+	min-height: 342px;
+}
+.focus-bg h2{
+	position: relative;
+	z-index: 2;
+	color: #fff;
+	font-size: 30px;
+	line-height: 42px;
+	font-weight: 700;
+	z-index: 2;
+}
+.focus-bg h2 span:first-child{
+	color: #2196f3;
+}
+.focus-bg h2 span:last-child{
+	color: #ffc107;
+}
+.focus .box2{
+	position: relative;
+	z-index: 2;
+}
+.focusbox{
+	background-color: #f4f4f5;
+	overflow: hidden;
+    position: relative;
+    text-align: center;
+    -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+	border-radius: 6px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	text-align: center;
+    margin-bottom: 30px;
+}
+/*--- Focus end ---*/
+/*--- Footer start ---*/
+.footer {
+	background-color: #111;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 3px solid #2196f3;
+  }
+  .copyright {
+	color: #fff;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	text-transform: capitalize;
+	margin-bottom: 0;
+	height: 100%;
+	vertical-align: middle;
+	padding-top: 10px;
+  }
+  .social-icons{
+	text-align: right;
+	width: 100%;
+  }
+  .social-icons ul {
+	margin:0;
+	padding: 0;
+	text-align: right;
+	list-style-type: none;  
+  }
+  .social-icons ul li { 
+	list-style: none;
+	display: inline;
+	padding-left: 10px;
+  }
+  
+  .social-icons ul li a {
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #9d9d9d;
+	border-radius: 50px;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	color: #9d9d9d;
+	 transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-webkit-transition: all 1s;
+	
+  }
+  .social-icons ul li a:hover {
+	
+	background-color: #2196f3;
+	border: 1px solid #2196f3;
+	color: #fff;
+  } 
+  .social-icons ul li a i {
+	font-size: 16px;
+  }
+/*--- Footer end ---*/
+/*back-to-top*/
+#back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    z-index: 9999;
+    display: block;
+    display:none;
+    background: #2196f3;
+    color:#fff;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
