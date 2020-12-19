@@ -167,7 +167,8 @@ header {
 }
 .search-btn:after {
 	content: '\f002';
-	font-family: FontAwesome;
+	font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
 	font-size: 16px;
 }
 .search-active {
@@ -181,7 +182,8 @@ header {
 }
 .search-active:after {
 	content: '\f00d';
-	font-family: FontAwesome;
+	font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
 	font-size: 16px;
 }
 .head-searchBox {
