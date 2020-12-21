@@ -599,7 +599,7 @@ header {
     color: #fff!important;
 	background-color: #2196f3;
 }
-.box:hover i:after, .focusbox i:after{
+.box:hover i:after, .focusbox:hover i:after{
     border: 1px solid #2196f3;
 }
 .box:hover .content:after, .focusbox:hover .content:after, .box:hover .content:before, .focusbox:hover .content:before {
